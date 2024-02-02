@@ -7,6 +7,7 @@
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   list-style: none;
+  scroll-behavior:smooth;
 }
 
 :root {
@@ -93,7 +94,7 @@ nav > ul {
   color: grey;
   gap: var(--rtc-border-s);
   display: flex;
-  font-weight: 200;
+  font-weight: 400;
   font-size: small;
 }
 .logo {
@@ -146,12 +147,17 @@ font-size: 30px;
 .item{
   height: 460px;
 }
+
 .hot-stuff {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-left: 40px;
   margin-bottom: 40px;
 }
+/* .hot-stuff > section :hover {
+  transform: scale(1.1);
+} */
+
 .item-title {
   text-align: center;
   font-weight: 500;
@@ -167,7 +173,9 @@ font-size: 30px;
 #promo > img {
   height: 750px;
   object-fit: cover;
+  object-position: top;
   width: 100%;
+  border-radius: 2%;
 }
 #new-arrivals > h3 {
   text-align: center;
@@ -188,5 +196,106 @@ font-size: 30px;
     margin-top: 50px;
     }
     .collection-title {
-      
+      text-align: center;
     }
+    .collections {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      margin-bottom: 100px;
+      padding-bottom: 50px;
+    }
+    .collections > section > img {
+      object-fit: contain;
+      width: 388px;
+      height: 485px;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: solid 1pt black;
+      height: auto;
+      padding: 50px;
+      gap: 120px;
+      background-color: rgb(20, 31, 51);
+      color: white;
+      width: 100%;
+    }
+    .news {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 300px;
+    }
+    .news > h4 > span {
+      color: rgb(138, 211, 240);
+    }
+    .news > form > input {
+      height: 30px;
+      width: 200px;
+    }
+    .news > button {
+      height: 30px;
+      width: 90px;
+      border: 1pt solid white;
+      color: white;
+      background-color: rgb(20, 31, 51);
+      font-weight: 100;
+    }
+    .news > button:hover {
+      background-color: white;
+      color: rgb(20, 31, 51);
+      font-weight: 600;
+    }
+    .customer-service {
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .customer-service > img {
+      text-align: center;
+      width: 28px;
+      align-self: center;
+    }
+    .terms {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 200px;
+    }
+    .terms > h4 {
+      font-weight: 500;
+    }
+    .terms > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .terms > ul > li > a {
+      color: white;
+      font-size: 11px;
+    }
+    .support {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 200px;
+    }
+    .support > h4 {
+      font-weight: 500;
+    }
+    .support > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .support > ul > li > a {
+      color: white;
+      font-size: 11px;
+    } 
